@@ -21,6 +21,7 @@ while not done:
     # Update the game state based on the chosen action
     next_state, reward, done = env.step(action)
     state = next_state
-
+#print the score
+print(env.score)
 # Close the game environment
 env.close()
