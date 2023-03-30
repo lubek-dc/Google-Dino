@@ -26,5 +26,7 @@ The DQN agent uses a simple neural network with the following layers:
 The model is trained using the Mean Squared Error (MSE) loss function and the Adam optimizer. The agent also uses experience replay and epsilon-greedy exploration to improve its performance.
 
 ## Showcase
-[Link to video](https://github.com/lubek-dc/Google-Dino/blob/master/2023-03-30%2015-11-05.mp4?raw=true)
+
+
+https://user-images.githubusercontent.com/70327203/228851868-399e0e84-a0ce-401d-a9bc-a560f7880393.mp4
 
