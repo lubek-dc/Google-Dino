@@ -6,14 +6,14 @@ import os
 
 class DQNAgent:
     def __init__(self, state_size, action_size, model_path=None):
-        self.state_size = state_size
+        self.state_size = state_size      
         self.action_size = action_size
         self.memory = deque(maxlen=2000)
-        self.gamma = 0.95
-        self.epsilon = 1.0
-        self.epsilon_min = 0.01
-        self.epsilon_decay = 0.995
-        self.learning_rate = 0.001
+        self.gamma = 0.95 # discount rate 0.95=95%
+        self.epsilon = 0.8 # exploration rate 0.1=10%
+        self.epsilon_min = 0.3 # minimum exploration rate
+        self.epsilon_decay = 0.998 # decay rate (epsilon = epsilon * decay)
+        self.learning_rate = 0.001 # learning rate
         self.model_path = model_path
         self.model = self.build_model()
 
@@ -49,6 +49,7 @@ class DQNAgent:
             self.model.fit(state, target_f, epochs=1, verbose=0)
         if self.epsilon > self.epsilon_min:
             self.epsilon *= self.epsilon_decay
+            print(f"epsilon: {self.epsilon}")
 
     def save_model(self, model_path):
         self.model.save(model_path)
