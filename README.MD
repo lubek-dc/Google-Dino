@@ -26,7 +26,7 @@ The DQN agent uses a simple neural network with the following layers:
 The model is trained using the Mean Squared Error (MSE) loss function and the Adam optimizer. The agent also uses experience replay and epsilon-greedy exploration to improve its performance.
 
 ## Showcase
-
+This is training so it uses random jumps so the ai can learn quicker thats why it jumps so often
 
 https://user-images.githubusercontent.com/70327203/228851868-399e0e84-a0ce-401d-a9bc-a560f7880393.mp4
 
