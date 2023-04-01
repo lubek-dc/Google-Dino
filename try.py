@@ -4,7 +4,7 @@ import tensorflow as tf
 from dino_env import DinoEnv
 
 # Load the pre-trained model
-model_path = 'dino_dqn_model.h5'
+model_path = './backup/20230330-122526_110.h5'
 model = tf.keras.models.load_model(model_path)
 
 # Create the Dino game environment

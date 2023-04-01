@@ -15,7 +15,7 @@ game_speed = 5
 dino = Dino(50, 190)
 cactus = Cactus(900, 215, game_speed)
 ground = Ground(0, 250, game_speed)
-
+score = 0
 all_sprites = pygame.sprite.Group()
 all_sprites.add(dino)
 all_sprites.add(cactus)
@@ -25,6 +25,7 @@ while running:
     clock.tick(60)
 
     game_speed += 0.001
+    score += 1
 
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -42,6 +43,7 @@ while running:
     pygame.display.flip()
 
     if pygame.sprite.collide_rect(dino, cactus):
+        print(score)
         running = False
 
 pygame.quit()
