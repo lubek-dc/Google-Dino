@@ -30,3 +30,7 @@ This is training so it uses random jumps so the ai can learn quicker thats why i
 
 https://user-images.githubusercontent.com/70327203/228851868-399e0e84-a0ce-401d-a9bc-a560f7880393.mp4
 
+
+After Training:
+https://user-images.githubusercontent.com/70327203/235007741-c3de5d03-a987-40c4-a3bc-085159125c1c.mp4
+
