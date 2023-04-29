@@ -1,5 +1,5 @@
 # README
-Ai plays dino!
+Ai plays dino! (Keep in mind this is a solo project)
 ## Overview
 This project contains a reinforcement learning agent that learns to play the Google Chrome's Dino game. The agent uses Deep Q-Networks (DQNs) and a custom Pygame-based environment to learn how to jump over cacti and avoid obstacles in the game.
 
