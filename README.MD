@@ -9,7 +9,7 @@ This project contains a reinforcement learning agent that learns to play the Goo
 3. Install the required packages using pip: `pip install pygame tensorflow stable-baselines3 numpy pyperclip`
 4. Run the `train_dino.py` script to train the DQN agent.
 ## Explanation
-
+also the backup folder (i dont know why i named it like that) is all the pretrained model and there is a model_scores_sorted.txt that shows how good which models are after testing all of them
 ### Inputs
 The Dino game agent takes in three inputs as its state: the distance to the next cactus, the height of the Dino's jump, and the current game speed. These inputs are passed to the agent's neural network to predict the best action to take.
 
