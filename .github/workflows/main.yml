@@ -23,11 +23,16 @@ jobs:
         pip install openai
 
     - name: Get modified Python files
-      id: modified_files
+      id: get_modified_files
       run: |
-        FILES=$(git diff --name-only --diff-filter=d ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} | grep -E '\.py$')
+        FILES=$(git diff --name-only --diff-filter=d HEAD~1 HEAD | grep -E '\.py$')
         echo "Modified files: $FILES"
         echo "::set-output name=files::$FILES"
+        shell: /usr/bin/bash -e {0}
+      env:
+        pythonLocation: /opt/hostedtoolcache/Python/3.11.3/x64
+        LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.3/x64/lib
+
 
     - name: Run bug finder
       if: steps.modified_files.outputs.files != ''
